@@ -97,17 +97,17 @@ pub struct CardStyle<'a> {
 
 impl<'a> CardStyle<'a> {
     pub fn with_bar_height(bar_height: u32) -> CardStyle<'a> {
-        CardStyleBuilder::new().bar_height(bar_height).build()
+        CardStyleBuilder::big().bar_height(bar_height).build()
     }
 
     pub fn with_font(font: MonoFont<'a>) -> CardStyle<'a> {
-        CardStyleBuilder::new().font(font).build()
+        CardStyleBuilder::big().font(font).build()
     }
 }
 
 impl<'a> Default for CardStyle<'a> {
     fn default() -> Self {
-        CardStyleBuilder::new().build()
+        CardStyleBuilder::big().build()
     }
 }
 
@@ -116,7 +116,7 @@ pub struct CardStyleBuilder<'a> {
 }
 
 impl<'a> CardStyleBuilder<'a> {
-    pub fn new() -> CardStyleBuilder<'a> {
+    pub fn big() -> CardStyleBuilder<'a> {
         CardStyleBuilder {
             style: CardStyle {
                 bar_height: 20,

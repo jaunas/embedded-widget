@@ -31,7 +31,7 @@ fn main() -> Result<(), core::convert::Infallible> {
         Point::new(0, 150),
         card_size,
         "Kuchnia",
-        CardStyleBuilder::new().build(),
+        CardStyleBuilder::big().build(),
     )
     .draw(&mut display)?;
 
