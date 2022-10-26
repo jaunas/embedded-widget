@@ -1,4 +1,5 @@
 pub mod card;
+pub mod measurment;
 
 #[cfg(test)]
 mod tests {
